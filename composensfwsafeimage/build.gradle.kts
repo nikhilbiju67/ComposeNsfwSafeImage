@@ -1,6 +1,8 @@
 plugins {
     id("com.android.library")
     alias(libs.plugins.jetbrains.kotlin.android)
+    id("maven-publish")
+
 }
 
 android {
@@ -71,4 +73,17 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("release") {
+                groupId = "com.github.nikhilbiju67.composensfwsafeimage"
+                artifactId = "composensfwsafeimage"
+                version = "0.9-alpha"
+                from(components["release"])
+            }
+        }
+    }
 }
