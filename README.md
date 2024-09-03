@@ -7,7 +7,7 @@
 Add the JitPack repository to your `settings.gradle` file:
 ## DEMO
 ## DEMO
-![Phone Number Hint Demo](https://i.ibb.co/gPKNNyk/Whats-App-Video-2023-06-12-at-21-04-24-Adobe-Express-1.gif)
+![ComposeNsfwSafeImage Demo](https://i.ibb.co/3BJcGGW/ezgif-7-a20967c60b.gif)
 ![ComposeNsfwSafeImage Demo](https://i.ibb.co/3BJcGGW/ezgif-7-a20967c60b.gif)
 ```groovy
 dependencyResolutionManagement {
