@@ -5,6 +5,7 @@ import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -14,6 +15,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
@@ -34,6 +36,7 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.composensfwsafeimage.ui.theme.ComposeNsfwSafeImageTheme
@@ -49,12 +52,14 @@ class MainActivity : ComponentActivity() {
         setContent {
             ComposeNsfwSafeImageTheme {
                 var list = listOf(
-                    "https://example.com/image1.jpg",
+                    "http://example.com",
                 )
                 var modelSheet = rememberModalBottomSheetState()
                 val scope = rememberCoroutineScope()
                 var skipsafety by remember { mutableStateOf(false) }
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                Scaffold(
+
+                    modifier = Modifier.background(Color.White).fillMaxSize()) { innerPadding ->
 
                     Column(
                         Modifier
@@ -126,12 +131,13 @@ fun ImageWarningBottomSheet(
 ) {
     Column(
         modifier = Modifier
-            .height(200.dp)
+            .height(400.dp)
             .fillMaxWidth()
             .padding(32.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
+        Icon(Icons.Filled.Warning, modifier = Modifier.size(100.dp), contentDescription = "Warning")
         Text("This image is not safe for work Do you want to show it?")
         Spacer(modifier = Modifier.height(16.dp))
         ElevatedButton(onClick = {

@@ -5,7 +5,8 @@
 ## Installation
 
 Add the JitPack repository to your `settings.gradle` file:
-
+## DEMO
+!ComposeNsfwSafeImage Demo](https://i.ibb.co/3BJcGGW/ezgif-7-a20967c60b.gif)
 ```groovy
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
