@@ -6,8 +6,6 @@
 
 Add the JitPack repository to your `settings.gradle` file:
 ## DEMO
-## DEMO
-![ComposeNsfwSafeImage Demo](https://i.ibb.co/3BJcGGW/ezgif-7-a20967c60b.gif)
 ![ComposeNsfwSafeImage Demo](https://i.ibb.co/3BJcGGW/ezgif-7-a20967c60b.gif)
 ```groovy
 dependencyResolutionManagement {
